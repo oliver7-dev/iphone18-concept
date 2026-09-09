@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iPhone 18 — Engineering Preview</title>
+<meta name="description" content="A concept engineering preview of iPhone 18: titanium build, iris camera system, and the A20 Pro chip.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<nav class="nav">
+  <span class="nav__mark">iPhone 18</span>
+  <span class="nav__tag">ENGINEERING PREVIEW — CONCEPT</span>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero__sticky">
+    <p class="hero__eyebrow" data-scrub="eyebrow">Fig. 01 — Unibody Assembly</p>
+    <h1 class="hero__title">
+      <span>Opens</span>
+      <span>the moment</span>
+      <span>you arrive.</span>
+    </h1>
+
+    <svg class="hero__device" viewBox="0 0 400 600" aria-hidden="true">
+      <!-- shell -->
+      <rect class="device-shell" x="70" y="40" width="260" height="520" rx="52" />
+      <!-- screen, scales open from center -->
+      <rect class="device-screen" x="86" y="56" width="228" height="488" rx="38" />
+      <!-- dynamic island -->
+      <rect class="device-island" x="168" y="78" width="64" height="20" rx="10" />
+      <!-- camera plate, hinges open -->
+      <g class="device-camera-plate">
+        <rect x="220" y="60" width="90" height="90" rx="24" class="camera-plate-bg" />
+        <circle cx="245" cy="85" r="16" class="lens lens--1" />
+        <circle cx="285" cy="85" r="16" class="lens lens--2" />
+        <circle cx="265" cy="120" r="16" class="lens lens--3" />
+      </g>
+      <!-- leader lines -->
+      <g class="leader-lines">
+        <line x1="330" y1="70" x2="380" y2="70" />
+        <line x1="70" y1="500" x2="20" y2="500" />
+      </g>
+    </svg>
+
+    <div class="hero__specs" aria-hidden="true">
+      <span data-scrub="spec-a">HEIGHT 159.2mm</span>
+      <span data-scrub="spec-b">TITANIUM GRADE 5</span>
+      <span data-scrub="spec-c">IP69</span>
+    </div>
+
+    <p class="hero__scroll-cue">Scroll to open the assembly<br><span aria-hidden="true">↓</span></p>
+  </div>
+</section>
+
+<main>
+
+  <!-- DESIGN -->
+  <section class="panel" id="design">
+    <div class="panel__annotation reveal">
+      <span class="panel__index">02</span>
+      <span class="panel__label">Unibody · Titanium</span>
+    </div>
+    <div class="panel__grid">
+      <div class="panel__copy reveal">
+        <h2>One block. No seams.</h2>
+        <p>The frame is machined from a single billet of Grade 5 titanium, then bonded to a
+           ceramic-shield front in a process that leaves no visible seam along the edge.
+           It's 9% lighter than the steel frame it replaces.</p>
+        <ul class="spec-list">
+          <li><span>Frame</span><b>Grade 5 titanium</b></li>
+          <li><span>Front</span><b>Ceramic Shield 3</b></li>
+          <li><span>Weight</span><b>187g</b></li>
+          <li><span>Water resistance</span><b>IP69, 6m / 30min</b></li>
+        </ul>
+      </div>
+      <div class="panel__visual reveal">
+        <svg viewBox="0 0 300 400" aria-hidden="true" class="exploded">
+          <rect x="60" y="20" width="180" height="360" rx="44" class="ex-layer ex-layer--1" />
+          <rect x="70" y="140" width="160" height="120" rx="8" class="ex-layer ex-layer--2" />
+          <rect x="80" y="260" width="140" height="60" rx="8" class="ex-layer ex-layer--3" />
+          <line x1="150" y1="20" x2="150" y2="0" class="ex-tick" />
+          <line x1="150" y1="380" x2="150" y2="400" class="ex-tick" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMERA — signature aperture moment -->
+  <section class="panel panel--dark" id="camera">
+    <div class="panel__annotation reveal">
+      <span class="panel__index">03</span>
+      <span class="panel__label">Iris Camera System</span>
+    </div>
+    <div class="camera-stage reveal">
+      <svg viewBox="0 0 400 400" class="iris" aria-hidden="true">
+        <circle cx="200" cy="200" r="150" class="iris-ring" />
+        <g class="iris-blades">
+          <path d="M200,200 L200,60 A140,140 0 0,1 321,130 Z" class="blade blade--1"/>
+          <path d="M200,200 L321,130 A140,140 0 0,1 321,270 Z" class="blade blade--2"/>
+          <path d="M200,200 L321,270 A140,140 0 0,1 200,340 Z" class="blade blade--3"/>
+          <path d="M200,200 L200,340 A140,140 0 0,1 79,270 Z" class="blade blade--4"/>
+          <path d="M200,200 L79,270 A140,140 0 0,1 79,130 Z" class="blade blade--5"/>
+          <path d="M200,200 L79,130 A140,140 0 0,1 200,60 Z" class="blade blade--6"/>
+        </g>
+        <circle cx="200" cy="200" r="46" class="iris-core" />
+      </svg>
+      <div class="camera-copy">
+        <h2>48MP wide. Opens to ƒ/1.4.</h2>
+        <p>A six-blade physical iris — not a software trick — widens in low light and
+           narrows for sharper daylight shots, the same way a cinema lens does.</p>
+        <div class="camera-readout">
+          <span>APERTURE</span><b>ƒ/1.4 – ƒ/8.0</b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISPLAY -->
+  <section class="panel" id="display">
+    <div class="panel__annotation reveal">
+      <span class="panel__index">04</span>
+      <span class="panel__label">ProMotion XDR</span>
+    </div>
+    <div class="panel__grid panel__grid--reverse">
+      <div class="panel__visual reveal">
+        <svg viewBox="0 0 300 300" class="screen-diagram" aria-hidden="true">
+          <rect x="30" y="30" width="240" height="240" rx="10" class="screen-frame" />
+          <rect x="30" y="30" width="240" height="240" rx="10" class="screen-glow" />
+          <line x1="30" y1="150" x2="270" y2="150" class="screen-scan" />
+        </svg>
+      </div>
+      <div class="panel__copy reveal">
+        <h2>3,000 nits, edge to edge.</h2>
+        <p>The bezel is 30% thinner than the panel it replaces, and the refresh rate
+           drops as low as 1Hz to save power when the screen is mostly still.</p>
+        <ul class="spec-list">
+          <li><span>Peak brightness</span><b>3,000 nits</b></li>
+          <li><span>Refresh rate</span><b>1–120Hz ProMotion</b></li>
+          <li><span>Bezel</span><b>1.2mm</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINISHES -->
+  <section class="panel" id="finishes">
+    <div class="panel__annotation reveal">
+      <span class="panel__index">05</span>
+      <span class="panel__label">Finishes</span>
+    </div>
+    <h2 class="reveal finishes__title">Four finishes, one billet.</h2>
+    <div class="swatches">
+      <button class="swatch reveal" style="--sw:#8a8f96;" data-name="Titanium Slate">
+        <span class="swatch__dot"></span><span>Titanium Slate</span>
+      </button>
+      <button class="swatch reveal" style="--sw:#c9a66b;" data-name="Titanium Sand">
+        <span class="swatch__dot"></span><span>Titanium Sand</span>
+      </button>
+      <button class="swatch reveal" style="--sw:#e8734a;" data-name="Lumen Copper">
+        <span class="swatch__dot"></span><span>Lumen Copper</span>
+      </button>
+      <button class="swatch reveal" style="--sw:#0c0f14;" data-name="Titanium Graphite">
+        <span class="swatch__dot"></span><span>Titanium Graphite</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- SPECS -->
+  <section class="panel panel--dark" id="specs">
+    <div class="panel__annotation reveal">
+      <span class="panel__index">06</span>
+      <span class="panel__label">Full Specification</span>
+    </div>
+    <table class="spec-table reveal">
+      <tbody>
+        <tr><td>Chip</td><td>A20 Pro, 3nm</td></tr>
+        <tr><td>Display</td><td>6.3" Super Retina XDR, 3,000 nits</td></tr>
+        <tr><td>Camera</td><td>48MP main · 48MP ultrawide · 12MP tele, iris ƒ/1.4–ƒ/8.0</td></tr>
+        <tr><td>Battery</td><td>Up to 29 hours video playback</td></tr>
+        <tr><td>Frame</td><td>Grade 5 titanium, Ceramic Shield 3</td></tr>
+        <tr><td>Water resistance</td><td>IP69</td></tr>
+        <tr><td>Starting storage</td><td>256GB</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta reveal">
+    <h2>Notify me when it's real.</h2>
+    <p>This is a fan-made concept design — iPhone 18 isn't an announced Apple product.
+       Leave your email and we'll pretend to tell you first.</p>
+    <form class="cta__form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='You\'re on the list';">
+      <input type="email" placeholder="you@email.com" required aria-label="Email address">
+      <button type="submit">Notify me</button>
+    </form>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Concept design by a fan, not affiliated with or endorsed by Apple Inc.
+     "iPhone" is a trademark of Apple Inc.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
